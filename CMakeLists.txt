@@ -26,4 +26,7 @@ target_link_libraries(Engine glfw ${GLFW_LIBRARIES} Vulkan::Vulkan)
 
 target_include_directories(Engine PUBLIC "external/glfw-3.3.2/include")
 target_include_directories(Engine PUBLIC "external/glm")
+target_include_directories(Engine PUBLIC "shaders")
 target_include_directories(Engine PUBLIC ${Engine_BINARY_DIR})
+
+file(COPY shaders DESTINATION ${CMAKE_BINARY_DIR})
