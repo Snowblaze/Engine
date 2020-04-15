@@ -1018,3 +1018,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Model objects
+!models/*.obj
