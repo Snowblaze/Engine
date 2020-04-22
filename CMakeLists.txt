@@ -22,6 +22,7 @@ configure_file(Engine/EngineConfig.h.in EngineConfig.h)
 add_subdirectory(Engine)
 add_subdirectory("external/glfw-3.3.2")
 
+target_include_directories(Engine PRIVATE Vulkan::Vulkan)
 target_link_libraries(Engine glfw ${GLFW_LIBRARIES} Vulkan::Vulkan)
 
 target_include_directories(Engine PUBLIC "external")
